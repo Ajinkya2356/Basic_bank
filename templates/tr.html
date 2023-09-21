@@ -1,0 +1,26 @@
+{%extends "nav.html"%}{%block title%}Transfer{%endblock%}
+{%block content%}
+<div class="headline" style="margin:5%; text-align: center;">
+    <h1>Transfer Money</h1>
+</div>
+<div class="search-bx" style="margin-left: 10%; margin-bottom: 3%; width:80%;border:2px solid black;padding:5%;">
+    <form action="/transferamount" class="row g-3" method="post">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Name</label>
+            <input type="text" class="form-control" id="inputEmail4" name="Name">
+        </div>
+        <input type="hidden" name="sender" value="{{ sender }}">
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="inputPassword4" name="amount">
+        </div>
+
+
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Transfer</button>
+        </div>
+    </form>
+</div>
+
+
+{%endblock%}

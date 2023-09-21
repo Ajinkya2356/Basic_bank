@@ -1,0 +1,52 @@
+{%extends "nav.html"%}{%block title%}Transfer{%endblock%}
+{%block content%}
+<div class="headline" style="margin:5%; text-align: center;">
+    <h1>Transfer Money</h1>
+</div>
+<div class="search-bx" style="margin-left: 15%; margin-bottom: 3%;">
+    <form class="row g-3" method="post">
+        <div class="col-auto">
+            <label for="Name"><b>Name</b></label>
+            <input type="text" class="form-control" id="Name" name="name">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mt-4">Search</button>
+        </div>
+
+    </form>
+</div>
+
+<div class="container">
+
+    <table class="table table-dark table-hover table-bordered border">
+        <thead>
+            <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Name</th>
+                <th scope="col">City</th>
+                <th scope="col">Transfer</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for u in users %}
+            <tr>
+                <td>{{ u[0] }}</td>
+                <td>{{ u[1] }}</td>
+                <td>{{ u[4] }}</td>
+                <td>
+                    <form action="/tr" method="post" > 
+                        <input type="hidden" value="{{u[1]}}" name="sender">
+                        <button type="submit" class="btn btn-primary" onsubmit="redirectToTr()">Transfer</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        function redirectToTr() {
+            window.location.href = '/tr';
+        }
+    </script>
+</div>
+{%endblock%}
