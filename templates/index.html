@@ -1,0 +1,108 @@
+{%extends "nav.html"%}{%block title%}Home{%endblock%}
+{%block content%}
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<div class="cont">
+    <div class="jumbotron text-center" style="color:white;padding-top:10%;">
+        <h1>Welcome to Infinity Bank</h1>
+        <p>Your Trusted Financial Partner</p>
+        
+    </div>
+    <div class="container" style="color:white; ">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <h3>Easy Banking</h3>
+                <p>Manage your accounts and transactions online with ease.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>Secure &amp; Safe</h3>
+                <p>Your financial data is protected with the latest security measures.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h3>24/7 Support</h3>
+                <p>Our customer support team is available round the clock to assist you.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container mt-5" style="color:white; padding-top:5%;" >
+        <div class="row">
+
+            <div class="col-md-4">
+                <img src="static/img/about.jpeg" alt="About Us" class="img-fluid" style="border-radius:30px;height:500px; width:500px;">
+            </div>
+
+
+            <div class="col-md-8">
+                <h2 style="margin-top: 5%;">About Us</h2>
+                <br><br>
+                <p>
+                    Welcome to Infinity Bank, your trusted financial partner. We are committed to providing world-class banking solutions to individuals, businesses, and communities. With a legacy of excellence and a vision for the future, we strive to exceed your expectations at every step.
+                </p>
+                <br>
+                <p>
+                    Our mission is to empower your financial journey by offering innovative products, personalized services, and unmatched convenience. We believe in fostering lasting relationships built on trust, integrity, and transparency.
+                </p>
+                <br>
+                <p>
+                    At Infinity Bank, your financial goals are our top priority. Whether you're saving for the future, purchasing a home, or expanding your business, we're here to support your ambitions and dreams.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <section id="services" class=" py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" style="color:white;">Our Services</h2>
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="static/img/download.jpeg" class="card-img" alt="Service 1" style="width:350px;height:300px;margin-left:7%;">
+                        <div class="card-body text-center">
+                            <a href="/view">
+                                <h5 class="card-title">View Customers</h5>
+                            </a>
+                            <p class="card-text">Access your accounts and perform transactions online, anytime,
+                                anywhere.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="static/img/b.png" class="card-img-top" alt="Service 2"style="width:350px;height:300px;margin-left:7%;">
+                        <div class="card-body text-center">
+                            <a href="/search">
+                                <h5 class="card-title">Search User</h5>
+                            </a>
+                            <p class="card-text">Search the desire account for transfering the money.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <img src="static/img/c.jpeg" class="card-img-top" alt="Service 3"style="width:300px;height:220px;margin-left:14%;">
+                        <div class="card-body text-center">
+                            <a href="/transfer">
+                                <h5 class="card-title">Transfer Money</h5>
+                            </a>
+                            <p class="card-text">Get the funding you need for your home or business from you contacts.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<!-- <footer>
+    <b>Designed and Developed by @Ajinkya Jagtap</b>
+</footer> -->
+
+{%endblock%}
